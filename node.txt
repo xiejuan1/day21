@@ -1,0 +1,51 @@
+Git：
+	Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。分布式：不必服务器端软件支持。
+
+	全局配置：
+		git config --global user.name "runoob"
+		git config --global user.email test@runoob.com
+
+	工作空间：
+	版本库：
+	暂存区：
+
+	使用：
+		a. 初始化版本库：
+			git init
+
+			git status：查看版本库状态
+
+		b. 将待跟踪资源添加到暂存区：
+			git add .
+			git add <file>
+
+		c. 提交版本库
+			git commit -m "版本说明信息"
+
+			git log -- 查看提交日志
+d. 远程仓库：
+			https://github.com/ 或 https://coding.net/
+			1. 注册账户、登录
+			2. 配置 SSH KEY
+				生成 SSH key：
+					ssh-keygen -t rsa -C "youremail@example.com"
+				github上配置：
+					settings --> ssh and gpg keys --> new ssh key --> 输入title与key --> add ssh key
+				测试：
+					ssh -T git@github.com
+
+			3. 在 github 上创建远程仓库
+			4. 将本地仓库上推送到 github 远程仓库中
+				git remote add origin git@github.com:itrainhub/h51710_test.git
+				git push -u origin master
+流程：
+		a. 克隆远程仓库
+			git clone url
+		   更新远程仓库到本地
+		    git pull
+		b. 在工作空间中完成项目任务
+		c. 提交本地版本库，通常是在完成某一个功能并通过测试后
+			git add .
+			git commit -m "message"
+		d. 推送到远程仓库中
+			git push
